@@ -17,8 +17,8 @@ fn emulation_benchmark(c: &mut Criterion) {
                 Emulator::new(&settings)
             },
             |mut emulator: Emulator| {
-                for _ in 0..50 {
-                    black_box(emulator.emulate_frames(Duration::from_millis(100)));
+                for _ in 0..5 {
+                    black_box(emulator.emulate_frames(Duration::from_secs(1)));
                 }
             },
             BatchSize::SmallInput,
