@@ -18,3 +18,10 @@ ayumi = { git = "https://github.com/pacmancoder/rust-ayumi.git"}
 [dependencies.sdl2]
 version = "^0.32.2"
 features = ["unsafe_textures"]
+
+[dev-dependencies]
+criterion = "^0.2.11"
+
+[[bench]]
+name = "emulation"
+harness = false
