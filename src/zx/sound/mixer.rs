@@ -48,13 +48,15 @@ impl ZXMixer {
     }
 
     /// Updates internal buffer of mixer and fills it with new samples
-    pub fn process(&mut self, current_time: f64) {
+    pub fn process(&mut self, times: (usize, usize)) {
+        let (current_time, max_time) = times;
+
         // buffer overflow
         if self.ring_buffer.len() >= SAMPLES {
             return;
         }
         // so at this moment we need to get new samples from devices
-        let curr_pos = samples_from_time(current_time);
+        let curr_pos = samples_from_time(times);
         // if we on same pos or frame passed then no new samples
         if curr_pos <= self.last_pos {
             return;

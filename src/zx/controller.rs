@@ -98,12 +98,14 @@ impl ZXController {
     }
 
     /// returns current frame emulation pos in percents
-    fn frame_pos(&self) -> f64 {
-        let val = self.frame_clocks.count() as f64 / self.machine.specs().clocks_frame as f64;
-        if val > 1.0 {
-            1.0
+    fn frame_pos(&self) -> (usize, usize) {
+        let val = self.frame_clocks.count();
+        let max = self.machine.specs().clocks_frame;
+
+        if val > max {
+            (max, max)
         } else {
-            val
+            (val, max)
         }
     }
 

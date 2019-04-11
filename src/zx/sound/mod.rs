@@ -12,12 +12,7 @@ pub const SAMPLES: usize = SAMPLE_RATE / FPS;
 pub const CHANNELS: usize = 2;
 
 /// Returns, which must be already processed at this time
-pub fn samples_from_time(time: f64) -> usize {
-    if time >= 1.0 {
-        SAMPLES
-    } else if time <= 0.0 {
-        0
-    } else {
-        (SAMPLES as f64 * time) as usize
-    }
+pub fn samples_from_time(times: (usize, usize)) -> usize {
+    let (time, max) = times;
+    SAMPLES * time / max
 }
