@@ -11,10 +11,10 @@ extern crate sdl2;
 extern crate ayumi;
 
 // crate consists of theese modules
-mod utils;
-mod z80;
-mod zx;
-mod app;
+pub mod utils;
+pub mod z80;
+pub mod zx;
+pub mod app;
 pub mod emulator;
-mod backends;
+pub mod backends;
 pub mod settings;

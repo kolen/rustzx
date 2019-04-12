@@ -23,5 +23,5 @@ features = ["unsafe_textures"]
 criterion = "^0.2.11"
 
 [[bench]]
-name = "emulation"
+name = "canvas"
 harness = false
