@@ -10,7 +10,7 @@ keywords = ["emulator", "game", "z80"]
 license = "MIT"
 
 [dependencies]
-lazy_static = "0.2"
+lazy_static = "1.3"
 clap = "2.9"
 
 ayumi = { git = "https://github.com/pacmancoder/rust-ayumi.git"}
