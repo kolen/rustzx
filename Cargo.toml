@@ -11,7 +11,7 @@ license = "MIT"
 
 [dependencies]
 lazy_static = "0.2"
-clap = "2.9"
+clap = "2.33"
 
 ayumi = { git = "https://github.com/pacmancoder/rust-ayumi.git"}
 
