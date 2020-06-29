@@ -16,5 +16,5 @@ clap = "2.9"
 ayumi = { git = "https://github.com/pacmancoder/rust-ayumi.git"}
 
 [dependencies.sdl2]
-version = "^0.32.2"
+version = "^0.34.2"
 features = ["unsafe_textures"]
